@@ -22,7 +22,7 @@ Input:
 
 Output:
 ```
-1d6+x: 4 [4]
+1d6: 4 [4]
 ```
 
 Input: 
