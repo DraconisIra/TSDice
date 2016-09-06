@@ -6,13 +6,13 @@ Simple diceroller for teamspeak made in lua.
 Type roll {x}d{y}{+z}
  - x = number of dice to roll
  - y = size of dice
- - z = optional parameters, value to add to the total after the roll
+ - z = optional parameters, value to add to to the value of each die
 
 Value that are considered critical (maximum value of the rolled dice) will be written in green.
 
 1's will be written in red.
 
-If someone else in the chat tries to roll their username will be written before writing the result.
+Total number of critcal successes/fails will be shown at the end
 
 ### Example roll:
 
@@ -22,9 +22,7 @@ Input:
 
 Output:
 ```
-rolling 1d6
-(4)
-= 4
+1d6+x: 4 [4]
 ```
 
 Input: 
@@ -33,9 +31,7 @@ Input:
 
 Output:
 ```
-rolling 10d6
-(6 + 2 + 5 + 1 + 3 + 2 + 2 + 6 + 1 + 6)
-= 34
+rolling 10d6: 34 [6 2 5 1 3 2 2 6 1 6] [Criticals: 0/2]
 ```
 
 Input: 
@@ -44,9 +40,7 @@ Input:
 
 Output:
 ```
-rolling 2d6 + 5
-(1 + 2) + 5
-= 8
+rolling 2d6 + 5: 8 [1 2] [Criticals: 0/1]
 ```
 
 ## How to install
