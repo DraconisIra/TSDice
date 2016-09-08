@@ -101,6 +101,8 @@ local function diceRoller(message, fromName, clientID, fromID)
 
     if tonumber(numberOfDice) < 0 then
         return "I'm sorry hwat?"
+    elseif tonumber(numberOfDice) > 10000 then
+        return "[b]no[/b]"
     elseif tonumber(numberOfDice) < 1 then
         return "Total is [b]"..valueToAdd.."[/b] you autist"
     elseif tonumber(numberOfDice) == nil then
@@ -130,7 +132,7 @@ local function diceRoller(message, fromName, clientID, fromID)
 
     local returnMsg = " [" --start the result of the roll
 
-    if tonumber(numberOfDice) > 1 then
+    if tonumber(numberOfDice) > 0 then
         --printIceDice("numberOfDice > 1")
         for i=1,numberOfDice do
             resultMod, total, result = setResult(numberOfDiceFace,result,valueToAdd,resultMod,total)
